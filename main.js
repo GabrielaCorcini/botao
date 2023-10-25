@@ -12,3 +12,17 @@ function tocaSom(idElementoAudio){
         contador = contador+1;
         console.log(contador);
     }
+    const instrumento = listaDeTeclas[contador].classList[1];
+        const idAudio = `#som_${instrumento}`;
+        console.log(idAudio);
+    console.log(instrumento);
+    listaDeTeclas[contador].onclick = function (){
+        tocaSom('#som_tecla_splash');
+        const tecla= listaDeTeclas[contador];
+        const instrumento= tecla.classList[1];
+        console.log(instrumento);
+        tecla.onlick= function (){
+            tocaSom(idAudio);
+        }
+    }
+
